@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Apollo Theme Base</title>
+  <link rel="stylesheet" type="text/css" href="s/base.css" />
+  <link rel="stylesheet" type="text/css" href="s/grid.css" />
+  <link rel="stylesheet" type="text/css" href="highlight/styles/monokai_sublime.css" />
+  <script src="highlight/highlight.pack.js"></script>
+</head>
+
+<body>
+  <div id="page">
+    <header id="header">
+      <h1 class="logo"><a href="#">Apollo Theme Base</a></h1>
+      <ul class="nav">
+        <li><a href="#use">使用方法</a></li>
+        <li><a href="#list">列表</a></li>
+        <li><a href="#tip">提示</a></li>
+      </ul>
+    </header>
+    <section id="content" class="clearfix">
+      <article>
+        <h2 name="use" id="use">使用方法</h2>
+        <section class="article-body">
+          <h3>第一步：将 <a href="http://code.dianpingoa.com/f2e/m-apollo-theme-base" target="_blank">m-apollo-theme-base</a> 项目，添加为您的 submodule</h3>
+          <p>通常如下：</p>
+          <pre>
+<code class="bash">git submodule add git@code.dianpingoa.com:f2e/m-apollo-theme-base.git ./less/common</code>
+          </pre>
+          <h3>第二步：在您的 page.less 中，import base/_include.less 和您用到的 component less</h3>
+          <p>通常如下：</p>
+          <pre>
+<code class="css">@import './../common/base/include.less';
+@import './../common/component/default-list.less';
+</code>
+          </pre>
+          <h3>第三步：编写 gulp task，使 page.less 编译为 css 到指定目录（src/css）</h3>
+          <p>通常如下：</p>
+          <pre>
+<code class="javascript">var less = require('gulp-less');
+
+gulp.task('less', function() {
+  gulp.src('./less/page/**/*.less')
+    .pipe(less({
+      paths: [path.join(__dirname, 'less', 'base'), path.join(__dirname, 'less', 'component')]
+    }))
+    .pipe(gulp.dest('src/css/'));
+
+  gulp.src('./less/common/img/**/*.*')
+    .pipe(gulp.dest('src/img'));
+});
+</code>
+          </pre>
+        </section>
+      </article>
+      <article>
+        <h2 name="list" id="list">列表</h2>
+        <section class="article-body">
+          <h3>默认列表</h3>
+          <p>HTML 结构</p>
+          <pre>
+<code class="xml">&lt;ol class=&quot;list&quot;&gt;
+  &lt;li class=&quot;no-icon-next&quot;&gt;&lt;a href=&quot;#&quot;&gt;文字描述&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;文字描述&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span&gt;文字描述&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</code>
+          </pre>
+          <h3>含表单元素的列表</h3>
+          <pre>
+<code class="xml">&lt;ol class=&quot;list edit-list&quot;&gt;
+  &lt;li&gt;
+    &lt;span&gt;客户&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;no-icon-next&quot;&gt;
+    &lt;div class=&quot;controls&quot;&gt;
+      &lt;label class=&quot;required&quot;&gt;合同编号&lt;/label&gt;
+      &lt;input type=&quot;text&quot; placeholder=&quot;必填&quot; /&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li data-id=&quot;add-start-time&quot;&gt;
+    &lt;span class=&quot;required&quot;&gt;开始时间&lt;b&gt;未设置&lt;/b&gt;
+    &lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+          </pre>
+          <h3>面板列表</h3>
+          <pre>
+<code class="xml">&lt;ol class=&quot;panel-list&quot;&gt;
+  &lt;li&gt;
+    &lt;div&gt;
+      &lt;span&gt;电话&lt;/span&gt;
+      &lt;b&gt;13910293843&lt;/b&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span&gt;邮箱&lt;/span&gt;
+      &lt;b&gt;xxx@xxx.com&lt;/b&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;span&gt;角色&lt;/span&gt;
+      &lt;b&gt;经理&lt;/b&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+          </pre>
+        </section>
+        <h2 name="tip" id="tip">提示</h2>
+        <section class="article-body">
+          <h3>Toast</h3>
+          <pre>
+<code class="xml">&lt;div class=&quot;toast hide&quot;&gt;保存中...&lt;/div&gt;</code>
+          </pre>
+        </section>
+      </article>
+    </section>
+    <footer id="footer">
+      <p>&copy;2014 BY DMCCER All RIGHTS RESERVED</p>
+    </footer>
+  </div>
+  <script>
+  hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
+</html>
