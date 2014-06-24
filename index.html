@@ -44,7 +44,7 @@
 gulp.task('less', function() {
   gulp.src('./less/page/**/*.less')
     .pipe(less({
-      paths: [path.join(__dirname, 'less', 'base'), path.join(__dirname, 'less', 'component')]
+      paths: [path.join(__dirname, 'less/common/base'), path.join(__dirname, 'less/common/component')]
     }))
     .pipe(gulp.dest('src/css/'));
 
