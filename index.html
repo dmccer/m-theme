@@ -6,7 +6,7 @@
   <title>Apollo Theme Base</title>
   <link rel="stylesheet" type="text/css" href="s/base.css" />
   <link rel="stylesheet" type="text/css" href="s/grid.css" />
-  <link rel="stylesheet" type="text/css" href="highlight/styles/monokai_sublime.css" />
+  <link rel="stylesheet" type="text/css" href="highlight/styles/sunburst.css" />
   <script src="highlight/highlight.pack.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
@@ -54,7 +54,7 @@
           <pre>
 <code class="javascript">var less = require('gulp-less');
 
-gulp.task('less', function() {
+gulp.task('less', function () {
   gulp.src('./less/page/**/*.less')
     .pipe(less({
       paths: [path.join(__dirname, 'less/common/base'), path.join(__dirname, 'less/common/component')]
@@ -254,7 +254,7 @@ gulp.task('less', function() {
               </pre>
               <p>Javascript</p>
               <pre>
-<code class="javascript">var Picture = require('efte-picture');
+<code class="js">var Picture = require('efte-picture');
 var $pictureContainer = $('.picture-container');
 
 // 创建实例时，须传入图片预览的容器
