@@ -14,12 +14,21 @@
 <body>
   <div id="page">
     <header id="header">
-      <h1 class="logo"><a href="#">Apollo Theme Base</a></h1>
+      <h1 class="logo"><a href="#">Apollo Theme Base</a>
+      </h1>
       <ul class="nav">
-        <li><a href="#use">使用方法</a></li>
-        <li><a href="#list">列表</a></li>
-        <li><a href="#tip">提示</a></li>
-        <li><a href="https://github.com/chadluo/CSS-Guidelines/blob/master/README.md" target="_blank" class="external">Guide 文档</a></li>
+        <li><a href="#use">使用方法</a>
+        </li>
+        <li><a href="#list">列表</a>
+        </li>
+        <li><a href="#tip">提示</a>
+        </li>
+        <li><a href="#btn">按钮</a>
+        </li>
+        <li><a href="#biz">业务</a>
+        </li>
+        <li><a href="https://github.com/chadluo/CSS-Guidelines/blob/master/README.md" target="_blank" class="external">Guide 文档</a>
+        </li>
       </ul>
     </header>
     <section id="content" class="clearfix">
@@ -121,9 +130,9 @@ gulp.task('less', function() {
 &lt;/ol&gt;
 </code>
             </pre>
+            </div>
+            <iframe src="./component/panel-list/h.html" class="iframe"></iframe>
           </div>
-          <iframe src="./component/panel-list/h.html" class="iframe"></iframe>
-        </div>
         </section>
         <h2 name="tip" id="tip">提示</h2>
         <section class="article-body">
@@ -131,11 +140,66 @@ gulp.task('less', function() {
           <div class="preview">
             <div class="code">
               <pre>
-<code class="xml">&lt;div class=&quot;toast hide&quot;&gt;保存中...&lt;/div&gt;</code>
+<code class="xml">&lt;div class=&quot;toast&quot;&gt;保存中...&lt;/div&gt;</code>
           </pre>
+            </div>
+            <iframe src="./component/toast/h.html" class="iframe"></iframe>
           </div>
-          <iframe src="./component/toast/h.html" class="iframe"></iframe>
-        </div>
+          <h3>Mask</h3>
+          <div class="preview">
+            <div class="code">
+              <pre>
+<code class="xml">&lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;</code>
+            </pre>
+            </div>
+            <iframe src="./component/mask/h.html" class="iframe"></iframe>
+          </div>
+        </section>
+        <h2 name="btn" id="btn">按钮</h2>
+        <section class="article-body">
+          <h3>按钮</h3>
+          <div class="preview">
+            <div class="code">
+              <pre>
+<code class="xml">&lt;div class=&quot;btn&quot;&gt;添加联系人&lt;/div&gt;</code>
+          </pre>
+            </div>
+            <iframe src="./component/btn/h.html" class="iframe"></iframe>
+          </div>
+        </section>
+        <h2 name="biz" id="biz">业务</h2>
+        <section class="article-body">
+          <h3>搜索框</h3>
+          <div class="preview">
+            <div class="code">
+              <pre>
+<code class="xml">&lt;header class=&quot;search-box&quot;&gt;
+  &lt;div class=&quot;search&quot;&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;搜索客户&quot; data-id=&quot;search-input&quot; value=&quot;&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;span class=&quot;search&quot; data-id=&quot;search-btn&quot;&gt;搜索&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code>
+            </pre>
+            </div>
+            <iframe src="./component/search-box/h.html" class="iframe"></iframe>
+          </div>
+          <h3>缩略图列表</h3>
+          <div class="preview">
+            <div class="code">
+              <pre>
+<code class="xml">&lt;ol class=&quot;image-list clearfix&quot;&gt;
+  &lt;li class=&quot;image-icon&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;image-icon&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;image-icon&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;image-icon&quot;&gt;&lt;/li&gt;
+  &lt;li class=&quot;image-icon add&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;</code>
+            </pre>
+            </div>
+            <iframe src="./component/image-list/h.html" class="iframe"></iframe>
+          </div>
         </section>
       </article>
     </section>
@@ -145,8 +209,8 @@ gulp.task('less', function() {
   </div>
   <script>
   hljs.initHighlightingOnLoad();
-  $(function () {
-    $('.iframe').each(function () {
+  $(function() {
+    $('.iframe').each(function() {
       var $preview = $(this).parent();
       var codeH = $preview.outerHeight() - 27;
 
@@ -155,7 +219,9 @@ gulp.task('less', function() {
         return;
       }
 
-      $(this).css({height: codeH});
+      $(this).css({
+        height: codeH
+      });
     })
   })
   </script>
