@@ -24,8 +24,10 @@ module.exports = function (options) {
 
     var str = file.contents.toString('utf8');
 
-    file.contents = new Buffer(str);
-    file.path = gutil.replaceExtension(file.path, '.css');
+    var encodedStr = htmlencode.htmlEncode(str);
+
+    file.contents = new Buffer(encodedStr);
+    file.path = gutil.replaceExtension(file.path, '.ech');
     self.push(file);
 
     next();
