@@ -53,30 +53,13 @@ address {
   content: ' *';
   color: #ff9900;
 }
-.panel-list > li {
-  padding: 0.8em;
-  position: relative;
-  color: #323232;
-  background-color: #ffffff;
-  margin-bottom: 1em;
-}
-.panel-list > li > div {
-  margin-bottom: 0.5em;
-}
-.panel-list > li > div span {
-  padding-right: 1em;
-}
-.panel-list > li > div b {
-  font-weight: normal;
-}
-.panel-list > li > div:last-child {
-  margin-bottom: 0;
-}
-.panel-list > li .edit-btn {
+.btn {
   display: block;
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  color: #2f93d2;
-  padding: 0.5em;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  background-color: #ea9710;
+  text-align: center;
+  width: 90%;
+  margin: 5px auto;
 }
