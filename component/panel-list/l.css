@@ -1,0 +1,166 @@
+.red {
+  color: #ff717d;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2;
+}
+body {
+  font: normal 16px Arial, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+address {
+  font-style: normal;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix {
+  *zoom: 1;
+}
+.hide,
+.Hide {
+  display: none;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.required:after {
+  position: relative;
+  top: 0.25em;
+  content: ' *';
+  color: #ff9900;
+}
+.search-box {
+  display: flex;
+  display: -webkit-flexbox;
+  display: -webkit-box;
+  background-color: #ffffff;
+  padding: 0.5em 0.8em;
+}
+.search-box .search {
+  flex: 1;
+  -webkit-flex: 1;
+  -webkit-box-flex: 1;
+  height: 2em;
+  line-height: 2em;
+}
+.search-box .search .search-btn {
+  position: absolute;
+  display: block;
+  background: url('../img/search.png') no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+}
+.search-box .search input {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  padding: 0 2.5em;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+}
+.search-box .actions {
+  margin-left: 0.5em;
+}
+.search-box .actions span {
+  width: 2em;
+  display: block;
+  line-height: 2em;
+  text-align: center;
+}
+.image-list {
+  margin: 0 15px;
+}
+.image-list .image-icon {
+  margin: 0 10px 10px 0;
+  display: block;
+  float: left;
+  background: #ffffff;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.image-list .image-icon:nth-child(3n) {
+  margin-right: 0;
+}
+.image-list .image-icon > img {
+  width: 100%;
+  height: 100%;
+}
+.image-list .image-icon.add {
+  text-align: center;
+  color: #2f93d2;
+}
+.image-list .image-icon.add i {
+  font-style: normal;
+  font-size: 3em;
+}
+.image-list .image-icon.add span {
+  display: block;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #767676;
+  opacity: 0.6;
+  z-index: 10;
+}
+.panel-list > li {
+  padding: 0.8em;
+  position: relative;
+  color: #323232;
+  background-color: #ffffff;
+  margin-bottom: 1em;
+}
+.panel-list > li > div {
+  margin-bottom: 0.5em;
+}
+.panel-list > li > div span {
+  padding-right: 1em;
+}
+.panel-list > li > div b {
+  font-weight: normal;
+}
+.panel-list > li > div:last-child {
+  margin-bottom: 0;
+}
+.panel-list > li .edit-btn {
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  color: #2f93d2;
+  padding: 0.5em;
+}

@@ -27,7 +27,6 @@
 }
 #content {
     padding: 2em 0;
-    /*border-top: 3px solid #eeeeee;*/
 }
     #main {}
       h2 {
@@ -49,6 +48,22 @@
       a {
         color: #999999;
       }
+
+.preview {
+  display: flex;
+  display: -webkit-flexbox;
+  display: -webkit-box;
+}
+
+.preview .code {
+  flex: 1;
+  -webkit-flex: 1;
+  -webkit-box-flex: 1;
+  padding-right: 1em;
+}
+.preview .iframe {
+  width: 320px;
+}
 #footer {
     border-top: 3px solid #eeeeee;
     padding: 2em 0;

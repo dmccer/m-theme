@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="s/grid.css" />
   <link rel="stylesheet" type="text/css" href="highlight/styles/monokai_sublime.css" />
   <script src="highlight/highlight.pack.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 
 <body>
@@ -18,6 +19,7 @@
         <li><a href="#use">使用方法</a></li>
         <li><a href="#list">列表</a></li>
         <li><a href="#tip">提示</a></li>
+        <li><a href="https://github.com/chadluo/CSS-Guidelines/blob/master/README.md" target="_blank">Guide 文档</a></li>
       </ul>
     </header>
     <section id="content" class="clearfix">
@@ -60,16 +62,23 @@ gulp.task('less', function() {
         <section class="article-body">
           <h3>默认列表</h3>
           <p>HTML 结构</p>
-          <pre>
+          <div class="preview">
+            <div class="code">
+              <pre>
 <code class="xml">&lt;ol class=&quot;list&quot;&gt;
   &lt;li class=&quot;no-icon-next&quot;&gt;&lt;a href=&quot;#&quot;&gt;文字描述&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;文字描述&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;span&gt;文字描述&lt;/span&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </code>
-          </pre>
+              </pre>
+            </div>
+            <iframe src="./component/list/h.html" class="iframe"></iframe>
+          </div>
           <h3>含表单元素的列表</h3>
-          <pre>
+          <div class="preview">
+            <div class="code">
+              <pre>
 <code class="xml">&lt;ol class=&quot;list edit-list&quot;&gt;
   &lt;li&gt;
     &lt;span&gt;客户&lt;/span&gt;
@@ -86,9 +95,14 @@ gulp.task('less', function() {
   &lt;/li&gt;
 &lt;/ol&gt;
 </code>
-          </pre>
+              </pre>
+            </div>
+            <iframe src="./component/edit-list/h.html" class="iframe"></iframe>
+          </div>
           <h3>面板列表</h3>
-          <pre>
+          <div class="preview">
+            <div class="code">
+              <pre>
 <code class="xml">&lt;ol class=&quot;panel-list&quot;&gt;
   &lt;li&gt;
     &lt;div&gt;
@@ -106,14 +120,22 @@ gulp.task('less', function() {
   &lt;/li&gt;
 &lt;/ol&gt;
 </code>
-          </pre>
+            </pre>
+          </div>
+          <iframe src="./component/panel-list/h.html" class="iframe"></iframe>
+        </div>
         </section>
         <h2 name="tip" id="tip">提示</h2>
         <section class="article-body">
           <h3>Toast</h3>
-          <pre>
+          <div class="preview">
+            <div class="code">
+              <pre>
 <code class="xml">&lt;div class=&quot;toast hide&quot;&gt;保存中...&lt;/div&gt;</code>
           </pre>
+          </div>
+          <iframe src="./component/toast/h.html" class="iframe"></iframe>
+        </div>
         </section>
       </article>
     </section>
@@ -123,6 +145,19 @@ gulp.task('less', function() {
   </div>
   <script>
   hljs.initHighlightingOnLoad();
+  $(function () {
+    $('.iframe').each(function () {
+      var $preview = $(this).parent();
+      var codeH = $preview.outerHeight() - 27;
+
+      if (codeH < 150) {
+        $(this).height(150);
+        return;
+      }
+
+      $(this).css({height: codeH});
+    })
+  })
   </script>
 </body>
 

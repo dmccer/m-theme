@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "gulp": "^3.8.1",
+    "gulp-less": "^1.2.3",
     "gulp-util": "^2.2.17",
     "gulp-watch": "^0.6.8",
     "htmlencode": "0.0.4",
