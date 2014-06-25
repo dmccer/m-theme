@@ -23,9 +23,11 @@
         </li>
         <li><a href="#tip">提示</a>
         </li>
-        <li><a href="#btn">按钮</a>
+        <li><a href="#form">表单</a>
         </li>
         <li><a href="#biz">业务</a>
+        </li>
+        <li><a href="#js">JS 组件</a>
         </li>
         <li><a href="https://github.com/chadluo/CSS-Guidelines/blob/master/README.md" target="_blank" class="external">Guide 文档</a>
         </li>
@@ -155,7 +157,7 @@ gulp.task('less', function() {
             <iframe src="./component/mask/h.html" class="iframe"></iframe>
           </div>
         </section>
-        <h2 name="btn" id="btn">按钮</h2>
+        <h2 name="form" id="form">表单</h2>
         <section class="article-body">
           <h3>按钮</h3>
           <div class="preview">
@@ -165,6 +167,43 @@ gulp.task('less', function() {
           </pre>
             </div>
             <iframe src="./component/btn/h.html" class="iframe"></iframe>
+          </div>
+          <h3>复选框</h3>
+          <div class="preview">
+            <div class="code">
+              <pre>
+<code class="xml">&lt;ol class=&quot;list checkbox-list&quot; data-id=&quot;checkbox-list&quot;&gt;
+  &lt;li class=&quot;no-icon-next&quot;&gt;
+    &lt;span&gt;法人
+      &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; checked name=&quot;role&quot; value=&quot;关键联络人&quot; /&gt;
+        &lt;label&gt;&lt;i&gt;&lt;/i&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;no-icon-next&quot;&gt;
+    &lt;span&gt;订单确认人
+      &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;role&quot; value=&quot;订单确认人&quot; /&gt;
+        &lt;label&gt;&lt;i&gt;&lt;/i&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class=&quot;no-icon-next&quot;&gt;
+    &lt;span&gt;账号管理人
+      &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;role&quot; value=&quot;账号管理人&quot; /&gt;
+        &lt;label&gt;&lt;i&gt;&lt;/i&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code>
+          </pre>
+            </div>
+            <iframe src="./component/checkbox/h.html" class="iframe"></iframe>
           </div>
         </section>
         <h2 name="biz" id="biz">业务</h2>
@@ -202,6 +241,53 @@ gulp.task('less', function() {
             </pre>
             </div>
             <iframe src="./component/image-list/h.html" class="iframe"></iframe>
+          </div>
+        </section>
+        <h2 name="js" id="js">JS 组件</h2>
+        <section class="article-body">
+          <h3><a href="http://code.dianpingoa.com/f2e/efte-picture/tree/master" target="_blank" class="external">图片预览、添加、上传</a></h3>
+          <div class="preview">
+            <div class="code">
+              <p>html</p>
+              <pre>
+<code class="xml">&lt;ol class=&quot;image-list clearfix picture-container&quot;&gt;&lt;/ol&gt;</code>
+              </pre>
+              <p>Javascript</p>
+              <pre>
+<code class="javascript">var Picture = require('efte-picture');
+var $pictureContainer = $('.picture-container');
+
+// 创建实例时，须传入图片预览的容器
+// 也可传入初始展示的缩略图 (imageBase64 || [imageBase64])
+var picture = new Picture($pictureContainer);
+// var picture = new Picture($pictureContainer, imageBase64);
+// var picture = new Picture($pictureContainer, [imageBase64]);
+
+// 展示缩略图
+picture.show(imageBase64);
+// picture.show([imageBase64]);
+
+// 上传添加的图片
+picture.upload({
+  url: '/file',
+  complete: function (oks, errs) {
+    alert('complte upload: \n上传成功:' + oks.length + '\n上传失败: ' + errs.length);
+  },
+  timeoutCallback: function (aborts) {
+    alert('上传超时: ' + aborts.length);
+  }
+});
+
+// 类方法可以上传指定的图片
+Picture.upload({
+  images: imageBase64 || [imageBase64],
+  url: '/file',
+  complete: function (oks, errs) {},
+  timeoutCallback: function () {}
+});
+</code>
+              </pre>
+            </div>
           </div>
         </section>
       </article>

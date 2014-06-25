@@ -7,6 +7,7 @@
 
 .external {
     background: url(img/external.png) left center no-repeat;
+    padding-left: 20px;
 }
 
 #header h1 {
@@ -16,24 +17,26 @@
     }
 
     h1 a {
-        color: #ff6600;
+        color: #2f93d2;
     }
 .nav {
   position: fixed;
   background-color: #f2f2f2;
   right: 1em;
-  padding: 0.5em 0;
 }
-
+.nav li {
+  border-bottom: 1px solid #dddddd;
+}
+.nav li:last-child {
+  border-bottom: none;
+}
 .nav li a {
   display: block;
-  padding: 0.5em 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   margin: 0 1em;
 }
 
-.nav li a.external {
-  padding-left: 1.5em;
-}
 #content {
     padding: 2em 0;
 }

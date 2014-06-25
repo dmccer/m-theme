@@ -101,36 +101,40 @@ address {
 .list > li.no-icon-next > span {
   padding-right: 0.8em;
 }
-.edit-list li .controls {
-  display: flex;
-  display: -webkit-flexbox;
-  display: -webkit-box;
-  height: 3em;
-  line-height: 3em;
-  margin-right: 1.3em;
+/**
+ * <div class="checkbox"><input type="checkbox" name="role" value="关键联络人" /><label><i></i></label></div>
+ */
+.checkbox input {
+  display: none;
 }
-.edit-list li .controls label {
+.checkbox label,
+.checkbox i {
   display: block;
-  width: 5em;
-  color: #969696;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
-.edit-list li .controls input {
+.checkbox label {
+  width: 1em;
+  height: 1em;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+}
+.checkbox i {
+  display: none;
+  width: 0.6em;
+  height: 0.4em;
+  margin: 0.2em auto;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.checkbox input:checked + label {
+  border: 1px solid #2f93d2;
+}
+.checkbox input:checked + label i {
   display: block;
-  flex: 1;
-  -webkit-flex: 1;
-  -webkit-box-flex: 1;
-  border: none;
-  height: 100%;
-  font-size: 1em;
-  padding: 0 0.5em;
+  border-left: 2px solid #2f93d2;
+  border-bottom: 2px solid #2f93d2;
 }
-.edit-list li > span,
-.edit-list li > a {
-  color: #969696;
-}
-.edit-list li > span b,
-.edit-list li > a b {
+.checkbox-list > li span .checkbox {
   float: right;
-  font-weight: normal;
-  color: #737373;
 }
