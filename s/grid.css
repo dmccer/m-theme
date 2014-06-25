@@ -5,6 +5,10 @@
 
 #header {}
 
+.external {
+    background: url(img/external.png) left center no-repeat;
+}
+
 #header h1 {
         text-align: center;
         font-size: 4em;
@@ -23,7 +27,12 @@
 
 .nav li a {
   display: block;
-  padding: 0.5em 1em;
+  padding: 0.5em 0;
+  margin: 0 1em;
+}
+
+.nav li a.external {
+  padding-left: 1.5em;
 }
 #content {
     padding: 2em 0;
