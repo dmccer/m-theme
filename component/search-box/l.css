@@ -61,19 +61,32 @@ address {
   padding: 0.5em 0.8em;
 }
 .search-box .search {
+  position: relative;
   flex: 1;
   -webkit-flex: 1;
   -webkit-box-flex: 1;
   height: 2em;
   line-height: 2em;
 }
-.search-box .search .search-btn {
-  position: absolute;
+.search-box .search:before {
   display: block;
-  background: url('../img/search.png') no-repeat;
-  background-size: 30px 30px;
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  margin-top: -7px;
+  content: ' ';
+  width: 14px;
+  height: 14px;
+  background-image: url('../img/icon-search.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .search-box .search:before {
+    background-image: url('../img/icon-search@2x.png');
+  }
 }
 .search-box .search input {
   display: block;
