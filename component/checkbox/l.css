@@ -135,6 +135,6 @@ address {
   border-left: 2px solid #2f93d2;
   border-bottom: 2px solid #2f93d2;
 }
-.checkbox-list > li span .checkbox {
+.checkbox-list .checkbox {
   float: right;
 }
