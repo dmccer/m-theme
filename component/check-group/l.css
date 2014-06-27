@@ -101,14 +101,14 @@ address {
 .list > li.no-icon-next > span {
   padding-right: 0.8em;
 }
-.radios .radio-box {
+.check-group .check-button {
   display: inline-block;
   margin-top: -0.3em;
 }
-.radios .radio-box input {
+.check-group .check-button input {
   display: none;
 }
-.radios .radio-box label {
+.check-group .check-button label {
   display: inline-block;
   border: 1px solid #2f93d2;
   color: #2f93d2;
@@ -116,7 +116,7 @@ address {
   padding: 0.5em 0.8em;
   vertical-align: middle;
 }
-.radios .radio-box input:checked + label {
+.check-group .check-button input:checked + label {
   background-color: #2f93d2;
   color: #ffffff;
 }
