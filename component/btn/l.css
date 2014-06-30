@@ -53,6 +53,24 @@ address {
   content: ' *';
   color: #ff9900;
 }
+.hold-height {
+  height: 60px;
+}
+.sub-title {
+  font-size: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #323232;
+  margin-bottom: 0.5em;
+}
+.bottom-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #bbbbbb;
+  border-top: 1px solid #bbbbbb;
+  height: 60px;
+}
 .btn {
   display: block;
   height: 40px;
@@ -61,5 +79,5 @@ address {
   background-color: #ea9710;
   text-align: center;
   width: 90%;
-  margin: 5px auto;
+  margin: 10px auto;
 }

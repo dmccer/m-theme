@@ -53,6 +53,16 @@ address {
   content: ' *';
   color: #ff9900;
 }
+.hold-height {
+  height: 60px;
+}
+.sub-title {
+  font-size: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #323232;
+  margin-bottom: 0.5em;
+}
 .image-list {
   margin: 0 15px;
 }

@@ -73,3 +73,46 @@ address {
   opacity: 0.6;
   z-index: 10;
 }
+.footer-actionbar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 100;
+}
+.footer-actionbar .btn {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 90%;
+  margin: 0.5em auto;
+  background-color: #ffffff;
+  color: #2f93d2;
+}
+.footer-actionbar .del-btn {
+  background-color: #ffffff;
+  color: #2f93d2;
+}
+.footer-actionbar .cancel-btn {
+  background-color: #2f93d2;
+  color: #ffffff;
+  letter-spacing: 0.5em;
+}
+.bottom-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #bbbbbb;
+  border-top: 1px solid #bbbbbb;
+  height: 60px;
+}
+.btn {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  background-color: #ea9710;
+  text-align: center;
+  width: 90%;
+  margin: 10px auto;
+}

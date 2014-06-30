@@ -53,6 +53,16 @@ address {
   content: ' *';
   color: #ff9900;
 }
+.hold-height {
+  height: 60px;
+}
+.sub-title {
+  font-size: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #323232;
+  margin-bottom: 0.5em;
+}
 .search-box {
   display: flex;
   display: -webkit-flexbox;
@@ -65,8 +75,8 @@ address {
   flex: 1;
   -webkit-flex: 1;
   -webkit-box-flex: 1;
-  height: 2em;
-  line-height: 2em;
+  height: 2.5em;
+  line-height: 2.5em;
 }
 .search-box .search:before {
   display: block;
@@ -82,14 +92,6 @@ address {
   background-position: center center;
   background-size: 100% 100%;
   overflow: hidden;
-}
-.search-box .search .search-btn {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -5px;
-  width: 25px;
-  height: 35px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .search-box .search:before {
