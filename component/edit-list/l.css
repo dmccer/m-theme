@@ -92,7 +92,7 @@ address {
   content: ' ';
   width: 16px;
   height: 14px;
-  margin-top: -7px;
+  margin-top: -6px;
   overflow: hidden;
   background-image: url('../img/icon-pointer.png');
   background-repeat: no-repeat;
@@ -140,7 +140,10 @@ address {
 }
 .edit-list li > span b,
 .edit-list li > a b {
-  float: right;
+  position: absolute;
+  top: 50%;
+  right: 2em;
+  margin-top: -0.5em;
   font-weight: normal;
   color: #737373;
 }

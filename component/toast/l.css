@@ -85,6 +85,7 @@ address {
   border-radius: 5px;
   margin-left: -5em;
   margin-top: -4.5em;
+  z-index: 11;
 }
 .toast.hide {
   display: none;
