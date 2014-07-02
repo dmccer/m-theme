@@ -47,12 +47,6 @@ address {
 .clearfix:after {
   clear: both;
 }
-.required:after {
-  position: relative;
-  top: 0.25em;
-  content: ' *';
-  color: #ff9900;
-}
 .hold-height {
   height: 60px;
 }

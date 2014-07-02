@@ -1,16 +1,20 @@
 <link rel="stylesheet" type="text/css" href="./l.css" />
+<!--
+  @import ./common/component/default-list.less
+  @import ./common/component/edit-list.less
+-->
 <ol class="list edit-list">
   <li>
     <span>客户</span>
   </li>
-  <li class="no-icon-next">
+  <li class="no-icon-next required">
     <div class="controls">
-      <label class="required">合同编号</label>
+      <label>合同编号</label>
       <input type="text" placeholder="必填" />
     </div>
   </li>
-  <li data-id="add-start-time">
-    <span class="required">开始时间<b>未设置</b>
+  <li data-id="add-start-time" class="required">
+    <span>开始时间<b class="not-set">未设置</b>
     </span>
   </li>
 </ol>
@@ -19,14 +23,18 @@
   <li>
     <span>客户</span>
   </li>
-  <li class="no-icon-next">
+  <li class="no-icon-next required">
     <div class="controls">
       <label class="required">合同编号</label>
       <input type="text" placeholder="必填" />
     </div>
   </li>
-  <li data-id="add-start-time">
-    <span class="required">开始时间<b>未设置</b>
+  <li data-id="add-start-time" class="required">
+    <span>开始时间<b class="not-set">未设置</b>
+    </span>
+  </li>
+  <li data-id="add-start-time" class="required">
+    <span>开始时间<b>2014-07-02</b>
     </span>
   </li>
 </ol>
