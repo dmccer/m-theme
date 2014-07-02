@@ -67,7 +67,7 @@ address {
   display: flex;
   display: -webkit-flexbox;
   display: -webkit-box;
-  background-color: #ffffff;
+  background-color: #f8f8f8;
   padding: 0.5em 0.8em;
 }
 .search-box .search {
@@ -108,7 +108,7 @@ address {
   width: 100%;
   height: 100%;
   font-size: 1em;
-  border-radius: 5px;
+  border-radius: 8px;
   -webkit-appearance: none;
 }
 .search-box .actions {

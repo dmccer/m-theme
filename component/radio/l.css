@@ -67,13 +67,13 @@ address {
 .list {
   margin-bottom: 1em;
   background-color: #ffffff;
-  border-top: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
 }
 .list > li {
   position: relative;
-  margin-left: 1em;
-  border-bottom: 1px solid #bbbbbb;
+  margin-left: 0.5em;
+  border-bottom: 1px solid #c7c7c7;
 }
 .list > li > a,
 .list > li > span {
@@ -112,19 +112,24 @@ address {
   padding-right: 0.8em;
 }
 .radio-list .radio {
-  float: right;
+  position: absolute;
+  top: 50%;
+  right: 0.8em;
+  margin-top: -0.75em;
 }
 .radio label {
   display: block;
   position: relative;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   width: 1.5em;
   height: 1.5em;
   border-radius: 1.5em;
-  background-color: #e2e2e2;
+  border: 1px solid #c8c8c8;
 }
 .radio label i {
   position: absolute;
-  display: block;
+  display: none;
   width: 0.6em;
   height: 0.3em;
   top: 50%;
@@ -141,8 +146,10 @@ address {
 }
 .radio input:checked + label {
   background-color: #2f93d2;
+  border: none;
 }
 .radio input:checked + label i {
+  display: block;
   border-left: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
 }

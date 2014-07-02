@@ -67,13 +67,13 @@ address {
 .list {
   margin-bottom: 1em;
   background-color: #ffffff;
-  border-top: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
 }
 .list > li {
   position: relative;
-  margin-left: 1em;
-  border-bottom: 1px solid #bbbbbb;
+  margin-left: 0.5em;
+  border-bottom: 1px solid #c7c7c7;
 }
 .list > li > a,
 .list > li > span {
@@ -146,5 +146,8 @@ address {
   border-bottom: 2px solid #2f93d2;
 }
 .checkbox-list .checkbox {
-  float: right;
+  position: absolute;
+  top: 50%;
+  right: 0.8em;
+  margin-top: -0.5em;
 }
