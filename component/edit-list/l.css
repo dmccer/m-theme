@@ -156,6 +156,10 @@ address {
   overflow: hidden;
   text-align: right;
 }
+.edit-list li > span b.blue,
+.edit-list li > a b.blue {
+  color: #2f93d2;
+}
 .edit-list li > span b.not-set,
 .edit-list li > a b.not-set {
   color: #cccccc;
