@@ -5,14 +5,20 @@
   padding: 0px;
   margin: 0px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-backface-visibility: hidden;
 }
 html {
   width: 100%;
-  height: 100%;
-  background-color: #e2e2e2;
+  min-height: 100%;
+  background-color: #f0f0f0;
 }
 body {
   font: normal 16px Arial, "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #f0f0f0;
 }
 ul,
 ol {
@@ -57,17 +63,44 @@ address {
   color: #323232;
   margin-bottom: 0.5em;
 }
+.saving {
+  position: absolute;
+  background: rgba(30, 30, 30, 0.8);
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+.saving.hide {
+  display: none;
+}
+.toast {
+  position: absolute;
+  width: 8em;
+  padding: 1em;
+  background: rgba(30, 30, 30, 0.8);
+  color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
+  margin-left: -5em;
+  margin-top: -4.5em;
+  z-index: 11;
+}
+.toast.hide {
+  display: none;
+}
 /** default list view **/
 .list {
   margin-bottom: 1em;
   background-color: #ffffff;
-  border-top: 1px solid #c7c7c7;
-  border-bottom: 1px solid #c7c7c7;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
 }
 .list > li {
   position: relative;
   margin-left: 0.5em;
-  border-bottom: 1px solid #c7c7c7;
+  border-bottom: 1px solid #e1e1e1;
 }
 .list > li > a,
 .list > li > span {
