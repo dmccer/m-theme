@@ -138,6 +138,9 @@ address {
 .list > li.no-icon-next > span {
   padding-right: 0.8em;
 }
+.radio-list > li.no-icon-next > span {
+  padding-right: 2.8em;
+}
 .radio-list .radio {
   position: absolute;
   top: 50%;
