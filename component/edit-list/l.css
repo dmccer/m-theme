@@ -147,13 +147,17 @@ address {
   color: #ea9710;
 }
 .edit-list li.required.blank > span b,
-.edit-list li.error > span b {
+.edit-list li.error > span b,
+.edit-list li.required.blank > a b,
+.edit-list li.error > a b {
   color: #ea9710;
 }
-.edit-list li.blank > span b {
+.edit-list li.blank > span b,
+.edit-list li.blank > a b {
   color: #cccccc;
 }
-.edit-list li.digital > span b {
+.edit-list li.digital > span b,
+.edit-list li.digital > a b {
   color: #2f93d2;
 }
 .edit-list li > span,
