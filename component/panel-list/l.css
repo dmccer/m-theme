@@ -60,7 +60,7 @@ address {
   font-size: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  color: #323232;
+  color: #000000;
   margin-bottom: 0.5em;
 }
 .saving {
@@ -93,7 +93,6 @@ address {
 .panel-list > li {
   padding: 0.8em;
   position: relative;
-  color: #323232;
   background-color: #ffffff;
   margin-bottom: 1em;
 }
@@ -102,9 +101,11 @@ address {
 }
 .panel-list > li > div span {
   padding-right: 1em;
+  color: #bbbbbb;
 }
 .panel-list > li > div b {
   font-weight: normal;
+  color: #000000;
 }
 .panel-list > li > div:last-child {
   margin-bottom: 0;

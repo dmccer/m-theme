@@ -60,7 +60,7 @@ address {
   font-size: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  color: #323232;
+  color: #000000;
   margin-bottom: 0.5em;
 }
 .saving {
@@ -162,7 +162,7 @@ address {
   min-width: 5em;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #969696;
+  color: #bbbbbb;
 }
 .edit-list li .controls input {
   display: block;
@@ -176,7 +176,7 @@ address {
 }
 .edit-list li > span,
 .edit-list li > a {
-  color: #969696;
+  color: #bbbbbb;
 }
 .edit-list li > span b,
 .edit-list li > a b {
@@ -185,7 +185,7 @@ address {
   right: 2em;
   margin-top: -0.5em;
   font-weight: normal;
-  color: #737373;
+  color: #000000;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
