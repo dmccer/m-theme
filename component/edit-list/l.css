@@ -146,8 +146,31 @@ address {
   content: ' *';
   color: #ea9710;
 }
-.edit-list li.required > span .not-set {
+.edit-list li.required.error > span b {
   color: #ea9710;
+}
+.edit-list li.error > span b {
+  color: #cccccc;
+}
+.edit-list li.digital > span b {
+  color: #2f93d2;
+}
+.edit-list li > span,
+.edit-list li > a {
+  color: #bbbbbb;
+}
+.edit-list li > span b,
+.edit-list li > a b {
+  position: absolute;
+  top: 50%;
+  right: 2em;
+  margin-top: -0.5em;
+  font-weight: normal;
+  color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
 }
 .edit-list li .controls {
   display: flex;
@@ -173,29 +196,4 @@ address {
   height: 100%;
   font-size: 1em;
   padding: 0 0.5em;
-}
-.edit-list li > span,
-.edit-list li > a {
-  color: #bbbbbb;
-}
-.edit-list li > span b,
-.edit-list li > a b {
-  position: absolute;
-  top: 50%;
-  right: 2em;
-  margin-top: -0.5em;
-  font-weight: normal;
-  color: #000000;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  text-align: right;
-}
-.edit-list li > span b.blue,
-.edit-list li > a b.blue {
-  color: #2f93d2;
-}
-.edit-list li > span b.not-set,
-.edit-list li > a b.not-set {
-  color: #cccccc;
 }
