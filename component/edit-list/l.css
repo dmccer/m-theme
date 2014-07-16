@@ -146,10 +146,11 @@ address {
   content: ' *';
   color: #ea9710;
 }
-.edit-list li.required.error > span b {
+.edit-list li.required.blank > span b,
+.edit-list li.error > span b {
   color: #ea9710;
 }
-.edit-list li.error > span b {
+.edit-list li.blank > span b {
   color: #cccccc;
 }
 .edit-list li.digital > span b {
