@@ -64,7 +64,7 @@ address {
   margin-bottom: 0.5em;
 }
 .saving {
-  position: absolute;
+  position: fixed;
   background: rgba(30, 30, 30, 0.8);
   color: white;
   text-align: center;
@@ -74,7 +74,7 @@ address {
   display: none;
 }
 .toast {
-  position: absolute;
+  position: fixed;
   width: 8em;
   padding: 1em;
   background: rgba(30, 30, 30, 0.8);
@@ -138,6 +138,12 @@ address {
 .list > li.no-icon-next > span {
   padding-right: 0.8em;
 }
+.empty-list {
+  height: 5em;
+  line-height: 5em;
+  text-align: center;
+  color: #878787;
+}
 .check-group .check-button {
   display: inline-block;
   margin-top: -0.3em;
@@ -156,5 +162,15 @@ address {
 }
 .check-group .check-button input:checked + label {
   background-color: #2f93d2;
+  color: #ffffff;
+}
+.disabled .check-group .check-button label {
+  background-color: #cccccc;
+  border: none;
+  color: #ffffff;
+}
+.disabled .check-group .check-button input:checked + label {
+  background-color: #333333;
+  border: none;
   color: #ffffff;
 }

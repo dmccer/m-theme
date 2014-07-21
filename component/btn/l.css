@@ -64,7 +64,7 @@ address {
   margin-bottom: 0.5em;
 }
 .saving {
-  position: absolute;
+  position: fixed;
   background: rgba(30, 30, 30, 0.8);
   color: white;
   text-align: center;
@@ -74,7 +74,7 @@ address {
   display: none;
 }
 .toast {
-  position: absolute;
+  position: fixed;
   width: 8em;
   padding: 1em;
   background: rgba(30, 30, 30, 0.8);
@@ -107,4 +107,15 @@ address {
   text-align: center;
   width: 90%;
   margin: 10px auto;
+}
+.delete-btn {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  color: #E11715;
+  background-color: #ffffff;
+  text-align: center;
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid #d7d7d7;
 }
