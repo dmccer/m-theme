@@ -1,0 +1,106 @@
+@import "./../../common/base/_include.less";
+@import "./../../common/component/default-list.less";
+@import "./../../common/component/star.less";
+
+.shop-list {
+  background: none;
+  padding-left: 0;
+  border: none;
+
+  li {
+    padding-right: 2.5em;
+    padding-left: 0.8em;
+    padding-top: 0.625em;
+    padding-bottom: 0.625em;
+    margin-bottom: 0.625em;
+    margin-left: 0;
+    border-bottom: none;
+    background-color: @white;
+
+    h3, .line-panel {
+      margin-bottom: 0.5em;
+    }
+
+    h3 {
+      font-size: 1em;
+    }
+
+    .line-panel:last-child {
+      margin-bottom: 0;
+    }
+
+    address, .shop-owner {
+      color: @gray-87;
+      font-size: 0.75em;
+    }
+
+    .customer a {
+      color: @gray-87;
+      font-size: 0.75em;
+    }
+
+    h3 {
+      color: @black-32;
+    }
+
+    .shop-owner:before {
+      display: inline-block;
+      content: ' ';
+      width: 19px;
+      height: 19px;
+      vertical-align: bottom;
+      margin-right: 0.5em;
+      background-image: url('../img/icon-owner.png');
+      background-repeat: no-repeat;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .shop-owner:before {
+        background-image: url('../img/icon-owner@2x.png');
+        background-size: 100% 226.32%;
+      }
+    }
+
+    .shop-owner.other:before, .shop-owner.mine:before {
+      background-position: 0 0;
+    }
+
+    .shop-owner.public {
+      color: @orange-dp;
+    }
+
+    .shop-owner.public:before {
+      background-position: 0 -24px;
+    }
+
+    .distance b, .category {
+      color: @gray-cc;
+      font-size: 0.75em;
+    }
+
+    .category {
+      padding-left: 1em;
+    }
+
+    .distance b {
+      font-weight: normal;
+    }
+
+    .icon-address {
+      display: inline-block;
+      width: 12px;
+      height: 19px;
+      background-image: url('../img/icon-address.png');
+      background-size: 100% 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .icon-address {
+        background-image: url('../img/icon-address@2x.png');
+      }
+    }
+  }
+}
